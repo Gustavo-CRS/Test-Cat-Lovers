@@ -104,9 +104,11 @@ WHERE
 
 Query para extrair aleatoriamente 10% da base contendo apenas as colunas solicitadas.
 
+**Observação para o time de desenvolvimento:** Substitua `[BUCKET_NAME]` pelo nome do bucket de destino.
+
 ```sql
 EXPORT DATA OPTIONS(
-  uri='gs://[NOME_DO_SEU_BUCKET]/amostras_qa/cat_facts_sample_*.csv',
+  uri='gs://[BUCKET_NAME]/amostras_qa/cat_facts_sample_*.csv',
   format='CSV',
   overwrite=true,
   header=true,
